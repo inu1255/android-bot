@@ -1,0 +1,69 @@
+{
+  "name": "android-bot",
+  "version": "1.0.0",
+  "description": "android bot",
+  "main": "build/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/inu1255/android-bot.git"
+  },
+  "keywords": [
+    "android",
+    "bot"
+  ],
+  "author": "inu1255",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/inu1255/android-bot/issues"
+  },
+  "homepage": "https://github.com/inu1255/android-bot#readme",
+  "dependencies": {
+    "electron-compile": "^6.4.2",
+    "electron-squirrel-startup": "^1.0.0"
+  },
+  "devDependencies": {
+    "babel-plugin-transform-async-to-generator": "^6.24.1",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "electron-forge": "^4.2.0",
+    "electron-prebuilt-compile": "1.7.11"
+  },
+  "config": {
+    "forge": {
+      "make_targets": {
+        "win32": [
+          "squirrel"
+        ],
+        "darwin": [
+          "zip"
+        ],
+        "linux": [
+          "deb",
+          "rpm"
+        ]
+      },
+      "electronPackagerConfig": {
+        "packageManager": "npm"
+      },
+      "electronWinstallerConfig": {
+        "name": "android_bot"
+      },
+      "electronInstallerDebian": {},
+      "electronInstallerRedhat": {},
+      "github_repository": {
+        "owner": "",
+        "name": ""
+      },
+      "windowsStoreConfig": {
+        "packageName": "",
+        "name": "androidbot"
+      }
+    }
+  }
+}
